@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- "filter.png" from https://www.flaticon.com/free-icon/filter_107799 -->
+    <!-- "android_arrow_up.png" from https://www.onlinewebfonts.com/icon/411268 -->
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- General container -->
+    <div class="grid-container">
+
+        <!-- Upper bar above other items -->
+        <div class="header flex-container">
+            <div class="invoices flex-child"><p>Invoices</p></div>
+            <div class="headerButtons flex-child">
+                <button><img src="android_arrow_up.png" alt="" height="11px">   Export</button>
+                <button id="new">+ New</button>
+                <button ><img src="filter.png" alt="Filter" height="12px"></button>
+                <button id="btnDots"><p id="dots">&#8942</p></button>
+            </div>
+        </div>
+        
+        <!-- Table div -->
+        <div class="table">
+
+            <!-- The bar to choose how table is displayed -->
+            <div class="tablePag flex-container">
+                <div class="left flex-child">
+                    <label for="resPerPage" id="lblRes">Results per page</label>
+                    <select name="resPerPage" id="resPerPage">
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div class="center flex-child">
+                    <button id="btnArrow" disabled><</button>
+                    <label for="btn" id="lblone">1</label>
+                    <button id="btnArrow">></button>
+                </div>
+                <div class="right flex-child">
+                    <label for="resPerPage" id="lblRes">Page</label>
+                    <select name="resPerPage" id="resPerPage">
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tableContents">
+            
+                <div class="tableHead flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="thcheckbox" id="thcheckbox" checked></div>
+                    <div class="tableItem tableHead type flex-child"><p>Type</p></div>
+                    <div class="tableItem tableHead date flex-child"><p>Date</p></div>
+                    <div class="tableItem tableHead customer flex-child">Customer</div>
+                    <div class="tableItem tableHead location flex-child">Location</div>
+                    <div class="tableItem tableHead state flex-child">State</div>
+                    <div class="tableItem tableHead total flex-child">Total</div>
+                    <div class="tableItem tableHead lastColumn flex-child"></div>
+                </div>
+            
+
+                <div class="tableRow flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox"></div>
+                    <div class="tableItem type flex-child"><p>Receipt</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p></div>
+                    <div class="tableItem customer flex-child"><p>Lydia Dias</p></div>
+                    <dip class="tableItem location flex-child"><p>Location #12</p></dip>
+                    <div class="tableItem state flex-child"><ul class="inProgress"><li id="bullet"><p id="afterBullet">IN PROGRESS</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container">                
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox"></div>
+                    <div class="tableItem type flex-child"><p>Receipt</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p><p class="due">DUE 2 DAYS AGO</p></div>
+                    <div class="tableItem customer flex-child"><p>Livia Siphron</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="pending-complete"><li id="bullet"><p id="afterBullet">PENDING</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>4147.20 €</p><p class="unpaid">UNPAID 200.29 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox"></div>
+                    <div class="tableItem type flex-child"><p>Invoice-Waybill</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p></div>
+                    <div class="tableItem customer flex-child"><p>Tatiana George</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="sucess"><li id="bullet"><p id="afterBullet">SUCCESS</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container" style="background-color: #e6f2ff;">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox" checked></div>
+                    <div class="tableItem type flex-child"><p>Invoice-Waybill</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p></div>
+                    <div class="tableItem customer flex-child"><p>Dulce Lipshutx</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="pending-complete"><li id="bullet"><p id="afterBullet">COMPLETE</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="thcheckbox"></div>
+                    <div class="tableItem type flex-child"><p>Prepayment inv.</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p></div>
+                    <div class="tableItem customer flex-child"><p>Paityn Philips</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="inProgress"><li id="bullet"><p id="afterBullet">IN PROGRESS</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container" style="background-color: #e6f2ff;">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox" checked></div>
+                    <div class="tableItem type flex-child"><p>Prepayment inv.</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p></div>
+                    <div class="tableItem customer flex-child"><p>Jordyn Mango</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="pending-complete"><li id="bullet"><p id="afterBullet">PENDING</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox"></div>
+                    <div class="tableItem type flex-child"><p>Receipt</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p><p class="due">DUE 2 DAYS AGO</p></div>
+                    <div class="tableItem customer flex-child"><p>Paityn Workman</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="sucess"><li id="bullet"><p id="afterBullet">SUCCESS</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox"></div>
+                    <div class="tableItem type flex-child"><p>Receipt</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p><p class="due">DUE 2 DAYS AGO</p></div>
+                    <div class="tableItem customer flex-child"><p>Davis Dorwart</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="pending-complete"><li id="bullet"><p id="afterBullet">COMPLETE</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox"></div>
+                    <div class="tableItem type flex-child"><p>Receipt</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p></div>
+                    <div class="tableItem customer flex-child"><p>Craig Workman</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="pending-complete"><li id="bullet"><p id="afterBullet">COMPLETE</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+                <div class="tableRow flex-container">
+                    <div class="tableItem ch flex-child"><input type="checkbox" name="checkbox" id="checkbox"></div>
+                    <div class="tableItem type flex-child"><p>Receipt</p><p class="nrForType">#100048</p></div>
+                    <div class="tableItem date flex-child"><p>21.10.2022</p></div>
+                    <div class="tableItem customer flex-child"><p>Alfredo George</p></div>
+                    <div class="tableItem location flex-child"><p>Location #12</p></div>
+                    <div class="tableItem state flex-child"><ul class="pending-complete"><li id="bullet"><p id="afterBullet">COMPLETE</p></li></ul></div>
+                    <div class="tableItem total flex-child"><p>129.00 €</p></div>
+                    <div class="tableItem lastColumn flex-child"><button class="lastColumn">&#8942</button></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Customers part on the right -->
+        <div class="customers">
+            <div class="addCustomersUpper flex-container">
+                <div class="invoices flex-child"><p>Customers</p></div>
+                <div class="add flex-child"><button id="add"><img src="AddUser.png" alt="" height="11px"> Add</button></div>
+            </div>
+            
+            <div class="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+            <div class="search flex-container"><img src="Search.png" alt="" id="imgSearch" height="12px"><input type="text" class="srchInp flex-child" placeholder=""><button class="srchBtn flex-child">Search</button></div>
+            <div class="companyList">
+                <ul class="companyList">
+                    <li class="company"><p class="companyLI">Marathon Oil Corp.</p></li>
+                    <li class="company"><p class="companyLI">Sealed Air</p></li>
+                    <li class="company"><p class="companyLI">Southern Company</p></li>
+                    <li class="company"><p class="companyLI">Atmos Energy</p></li>
+                    <li class="company"><p class="companyLI">Equifax Inc.</p></li>
+                    <li class="company"><p class="companyLI">Kansas City Southern</p></li>
+                    <li class="company"><p class="companyLI">Fidelity National Information Services</p></li>
+                    <li class="company"><p class="companyLI">Colgate-Palmolive</p></li>
+                    <li class="company"><p class="companyLI">Air Products & Chemicals Inc</p></li>
+                    <li class="company"><p class="companyLI">Intuitive Surgical Inc.</p></li>
+                    <li class="company"><p class="companyLI">Quest Diagnostics</p></li>
+                    <li class="company"><p class="companyLI">Crown Castle International Corp.</p></li>
+                    <li class="company"><p class="companyLI">News Corp. Class A</p></li>
+                    <li class="company"><p class="companyLI">Federal Realty Investment Trust</p></li>
+                    <li class="company"><p class="companyLI">Humana Inc.</p></li>
+                </ul>
+            </div>
+            <div class="addCustomers">
+                <div class="addCustomersInner">
+                    <div class="flex-container">
+                        <div class="flex-child"><p class="addCustomersHead">Add customers</p></div>
+                        <div class="flex-child"><p class="addCustomersHead close">x</p></div>
+                    </div>
+                    <p>You can add customers by pressing the Add <br>+ button in the corner or by importing your <br>clients from a CSV file</p>
+                    <button class="flex-child" id="imprt"><img src="Cloud.png" alt="" height="12px">   Import customers</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
